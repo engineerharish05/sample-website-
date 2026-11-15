@@ -1,94 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Harish P — Electronics & Communication Engineering student focused on VLSI, digital design, embedded systems, AI/ML and robotics.">
-  <title>Harish P — ECE Engineering Student</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070812">
+  <meta name="description" content="Harish P — Electronics and Communication Engineering student exploring VLSI, embedded systems, wireless technology and intelligent systems.">
+  <title>HARISH P — Engineering Beyond Limits</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
 </head>
-<body>
-  <header class="nav">
-    <a class="logo" href="index.html">HARISH <span>P</span></a>
-    <button class="menu-btn" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="nav-links">
-      <a class="active" href="index.html">HOME</a>
-      <a href="projects.html">PROJECTS</a>
-      <a href="about.html">ABOUT</a>
-      <a href="about.html#contact">CONTACT</a>
+<body class="pre-entry">
+  <canvas id="world" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="wordmark" href="#home" aria-label="Harish P home">H<span>/</span>P <small>ENGINEERING LOG</small></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about">PROFILE</a><a href="#domains">DOMAINS</a><a href="#projects">PROJECTS</a><a href="#contact">CONTACT</a>
     </nav>
+    <div class="top-status"><i></i> SYSTEM ONLINE</div>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
   </header>
 
   <main>
-    <section class="hero container">
-      <div class="hero-copy-wrap">
-        <p class="eyebrow"><span></span> ELECTRONICS & COMMUNICATION ENGINEERING</p>
-        <h1>HARISH <em>P</em></h1>
-        <h2>ECE ENGINEERING STUDENT</h2>
-        <p class="hero-lead">Building at the intersection of <strong>hardware & intelligence.</strong></p>
-        <p class="hero-copy">I'm an Electronics & Communication Engineering student focused on VLSI and digital design, while exploring AI/ML, robotics and research-driven engineering.</p>
-        <div class="actions">
-          <a class="btn primary" href="projects.html">VIEW PROJECTS <span>→</span></a>
-          <a class="btn" href="about.html#contact">CONTACT ME</a>
-        </div>
+    <section class="hero" id="home">
+      <div class="hero-meta"><span>ECE // 2026—</span><span>INDEPENDENT BUILDER</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> ELECTRONICS · SYSTEMS · FUTURE TECHNOLOGY</p>
+        <h1 class="hero-name" aria-label="Harish P"><span>HARISH</span><span class="name-second">P<span class="name-period">.</span></span></h1>
+        <p class="tagline">ENGINEERING THE FUTURE <em>BEYOND LIMITS.</em></p>
+        <p class="hero-description">An Electronics & Communication Engineering student exploring how hardware, intelligence and connected systems can shape what comes next.</p>
+        <div class="hero-actions"><a class="action-primary" href="#projects">EXPLORE PROJECTS <b>↗</b></a><a class="action-secondary" href="#about">ENTER PROFILE <span>↓</span></a></div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="visual-grid"></div>
-        <div class="chip-art">
-          <span class="pin p1"></span><span class="pin p2"></span><span class="pin p3"></span><span class="pin p4"></span>
-          <div class="chip-core"><b>HP</b><small>ECE / 2028</small></div>
-        </div>
-        <div class="visual-label">HARDWARE<br>×<br>INTELLIGENCE<br>×<br>POSSIBILITIES</div>
-        <div class="visual-line"></div>
-      </div>
+      <div class="hero-coordinates"><span>13° / 80°</span><span>PERSONAL ENGINEERING ARCHIVE</span><span>SCROLL TO EXPLORE ↓</span></div>
+      <div class="hero-side-label">FIELD NOTES / 001</div>
     </section>
 
-    <section class="quick-strip">
-      <div><strong>VLSI</strong><span>Digital Design</span></div>
-      <div><strong>Embedded Systems</strong><span>Electronics</span></div>
-      <div><strong>AI / ML</strong><span>Exploration</span></div>
-      <div><strong>Robotics</strong><span>Exploration</span></div>
-    </section>
-
-    <section class="section section-gray">
-      <div class="container">
-        <div class="section-heading"><div><p class="section-kicker">01. TECHNICAL AREAS</p><h2>What I <span>Work On</span></h2></div><p>Exploring and building across hardware, software and intelligent systems.</p></div>
-        <div class="area-grid">
-          <article><div class="icon">▣</div><h3>VLSI / Digital Design</h3><p>Verilog, RTL, FPGA and digital systems.</p><a href="projects.html">Explore <span>→</span></a></article>
-          <article><div class="icon">◈</div><h3>Embedded Systems</h3><p>Arduino, ESP32, electronics and IoT.</p><a href="projects.html">Explore <span>→</span></a></article>
-          <article><div class="icon">✦</div><h3>AI / Machine Learning</h3><p>Exploring intelligent systems for real applications.</p><a href="about.html">Explore <span>→</span></a></article>
-          <article><div class="icon">⌁</div><h3>Robotics</h3><p>Exploring automation, control and intelligent machines.</p><a href="about.html">Explore <span>→</span></a></article>
+    <section class="section profile-section" id="about">
+      <div class="section-index">01 <span>— PROFILE FLOOR</span></div>
+      <div class="section-heading"><p class="eyebrow">THE ENGINEER</p><h2>Building a foundation.<br><em>Exploring the unknown.</em></h2></div>
+      <div class="profile-layout">
+        <div class="profile-monogram"><div class="monogram-ring"></div><span>H<span>P</span></span><small>ECE / ENGINEERING</small><b>PROFILE ID — HP.01</b></div>
+        <div class="profile-copy">
+          <p class="lead">I’m Harish P, an Electronics & Communication Engineering student at Prathyusha Engineering College.</p>
+          <p>My technical direction is rooted in electronics and digital systems, with an equal interest in VLSI and semiconductors, embedded systems and robotics, and wireless and communication technology.</p>
+          <p>I learn by building: exploring a concept, implementing it, testing what works, and improving the system. My longer-term direction is scientific research and deep-tech development.</p>
+          <div class="profile-facts"><div><small>EDUCATION</small><strong>B.E. · ECE</strong></div><div><small>INSTITUTION</small><strong>Prathyusha Engineering College</strong></div><div><small>FOCUS</small><strong>Engineering · R&D</strong></div></div>
         </div>
       </div>
     </section>
 
-    <section class="section container">
-      <div class="section-heading"><div><p class="section-kicker">02. SELECTED PROJECTS</p><h2>Featured <span>Projects</span></h2></div><a class="text-link" href="projects.html">VIEW ALL PROJECTS →</a></div>
-      <div class="project-grid">
-        <article class="project-card featured"><div class="project-visual digital"><span>RTL</span><strong>88:88</strong></div><div class="project-body"><small>01</small><h3>Digital Time Display</h3><div class="tags"><span>Verilog</span><span>Vivado</span><span>FPGA</span></div><p>Digital time-display implementation using RTL design and Xilinx Vivado.</p><a href="projects.html">View Project <span>→</span></a></div></article>
-        <article class="project-card"><div class="project-visual pcb"><span>PCB</span><strong>RF</strong></div><div class="project-body"><small>02</small><h3>Simple Radio PCB</h3><div class="tags"><span>PCB</span><span>Electronics</span><span>RF</span></div><p>A simple radio circuit and PCB design project.</p><a href="projects.html">View Project <span>→</span></a></div></article>
-        <article class="project-card"><div class="project-visual pir"><span>PIR</span><strong>ON</strong></div><div class="project-body"><small>03</small><h3>PIR Automatic Lighting</h3><div class="tags"><span>Arduino</span><span>Sensors</span><span>IoT</span></div><p>Automatic lighting using motion detection and a microcontroller.</p><a href="projects.html">View Project <span>→</span></a></div></article>
-        <article class="project-card"><div class="project-visual tesla"><span>HV</span><strong>⚡</strong></div><div class="project-body"><small>04</small><h3>Slayer Exciter</h3><div class="tags"><span>Electronics</span><span>High Frequency</span></div><p>High-frequency electronics experiment and prototype.</p><a href="projects.html">View Project <span>→</span></a></div></article>
-        <article class="project-card"><div class="project-visual app"><span>APP</span><strong>HF</strong></div><div class="project-body"><small>05</small><h3>HabitFlow</h3><div class="tags"><span>Flutter</span><span>Android</span><span>App</span></div><p>A habit-tracking app built around goals, streaks and progress.</p><a href="projects.html">View Project <span>→</span></a></div></article>
+    <section class="section domains-section" id="domains">
+      <div class="section-index">02 <span>— TECHNICAL DOMAINS</span></div>
+      <div class="section-heading"><p class="eyebrow">AREAS OF EXPLORATION</p><h2>Three connected<br><em>engineering frontiers.</em></h2></div>
+      <div class="domain-grid">
+        <article class="domain-card"><div class="domain-number">01 / SILICON</div><div class="domain-glyph chip-glyph"><span></span></div><h3>VLSI &<br>SEMICONDUCTORS</h3><p>Digital design, Verilog, RTL concepts and the architecture of computing hardware.</p><div class="domain-tags">VERILOG <i>·</i> DIGITAL DESIGN <i>·</i> CIRCUITS</div></article>
+        <article class="domain-card"><div class="domain-number">02 / MACHINES</div><div class="domain-glyph circuit-glyph"><span></span></div><h3>EMBEDDED<br>SYSTEMS & ROBOTICS</h3><p>Microcontrollers, electronics, sensing and the connection between code and physical systems.</p><div class="domain-tags">ARDUINO <i>·</i> ESP32 <i>·</i> CONTROL</div></article>
+        <article class="domain-card"><div class="domain-number">03 / SIGNAL</div><div class="domain-glyph wave-glyph"><span></span></div><h3>WIRELESS &<br>COMMUNICATION</h3><p>Communication systems and wireless technologies that can reduce dependence on physical connections.</p><div class="domain-tags">SIGNALS <i>·</i> RF <i>·</i> COMMUNICATION</div></article>
       </div>
+      <div class="skills-console"><div class="console-title"><span>TOOLS & LANGUAGES</span><span>LEARNING / PRACTICE</span></div><div class="skill-list"><span>VERILOG</span><span>C++</span><span>PYTHON</span><span>MATLAB</span><span>ARDUINO</span><span>ESP32</span><span>GIT / GITHUB</span><span>KOTLIN</span></div><p>Skill labels describe tools and areas used or explored; no proficiency ratings are implied.</p></div>
     </section>
 
-    <section class="section section-gray">
-      <div class="container">
-        <div class="section-heading"><div><p class="section-kicker">03. CAREER INTERESTS</p><h2>Where I Want to <span>Grow</span></h2></div><p>Areas I'm focusing on for higher studies, research and future career opportunities.</p></div>
-        <div class="interest-grid">
-          <div><b>01</b><h3>VLSI</h3><p>Semiconductors</p></div><div><b>02</b><h3>AI / ML</h3><p>Intelligent Systems</p></div><div><b>03</b><h3>Robotics</h3><p>Automation</p></div><div><b>04</b><h3>R&D</h3><p>Deep Tech</p></div><div><b>05</b><h3>Entrepreneurship</h3><p>Long-term Goal</p></div>
-        </div>
+    <section class="section projects-section" id="projects">
+      <div class="section-index">03 <span>— PROJECT HANGAR</span></div>
+      <div class="section-heading"><p class="eyebrow">SELECTED BUILDS</p><h2>Ideas under<br><em>construction.</em></h2><p class="heading-note">A living record of engineering, software and research-oriented work. Project states are shown as they are, not as imagined milestones.</p></div>
+      <div class="project-list">
+        <article class="project-row"><div class="project-id">P—01</div><div class="project-symbol symbol-desk"><span>RD</span><i></i></div><div class="project-info"><div class="project-kicker">ANDROID · KOTLIN · JETPACK COMPOSE</div><h3>RishDesk</h3><p>A landscape-first Android desktop environment concept, designed around keyboard-driven workflows, a desktop-style launcher and productive use of a mobile device.</p><div class="project-state"><i></i> IN DEVELOPMENT</div></div><a class="project-arrow" href="https://github.com/engineerharish05/Rish-Deskdroid" target="_blank" rel="noopener" aria-label="RishDesk GitHub repository">↗</a></article>
+        <article class="project-row"><div class="project-id">P—02</div><div class="project-symbol symbol-code"><span>{ }</span><i></i></div><div class="project-info"><div class="project-kicker">ANDROID IDE · KOTLIN · DEVELOPER TOOLS</div><h3>CodeDeck</h3><p>A native Android coding environment concept with an editor-first workflow, terminal integration and a path toward local and remote development tools.</p><div class="project-state"><i></i> IN DEVELOPMENT</div></div><a class="project-arrow" href="https://github.com/engineerharish05/CodeDeck" target="_blank" rel="noopener" aria-label="CodeDeck GitHub repository">↗</a></article>
+        <article class="project-row"><div class="project-id">P—03</div><div class="project-symbol symbol-ai"><span>AI</span><i></i></div><div class="project-info"><div class="project-kicker">ANDROID · VOICE AI · AGENT SYSTEMS</div><h3>RishAI Assistant</h3><p>A voice-first Android assistant concept focused on contextual conversation, consent-based screen understanding, approved actions and verification.</p><div class="project-state state-planning"><i></i> ARCHITECTURE / MVP DEFINED</div></div><a class="project-arrow" href="https://rishinnovations.vercel.app" target="_blank" rel="noopener" aria-label="Rish Innovations website">↗</a></article>
       </div>
+      <div class="project-footnote"><span>MORE EXPERIMENTS WILL APPEAR HERE</span><span>NO FABRICATED DEMOS · NO CLAIMED COMPLETIONS</span></div>
     </section>
 
-    <section class="section container split-section">
-      <div><p class="section-kicker">04. ABOUT</p><h2>More <span>About Me</span></h2><p class="body-text">I'm Harish P, an Electronics & Communication Engineering student at Prathyusha Engineering College, graduating in 2028. I'm building my foundation in VLSI and digital design while exploring embedded systems, AI/ML and robotics.</p><a class="btn primary" href="about.html">LEARN MORE →</a></div>
-      <div class="contact-preview"><p class="section-kicker">05. CONTACT</p><h2>Let's <span>Connect</span></h2><p class="body-text">For collaborations, opportunities or technical discussions.</p><div class="contact-card"><strong>Email</strong><a href="mailto:engineerharish05@gmail.com">engineerharish05@gmail.com</a></div><div class="contact-card"><strong>GitHub</strong><a href="https://github.com/engineerharish05" target="_blank" rel="noopener">github.com/engineerharish05 ↗</a></div></div>
+    <section class="section vision-section" id="vision">
+      <div class="section-index">04 <span>— RESEARCH HORIZON</span></div>
+      <div class="vision-content"><p class="eyebrow">LONG-TERM DIRECTION</p><h2>From understanding<br>systems to <em>advancing them.</em></h2><p>My ambition is to grow into a scientist and deep-tech builder: to investigate hard problems, connect disciplines and turn sound ideas into useful technology.</p><div class="vision-pillars"><div><b>01</b><span>SCIENTIFIC<br>RESEARCH</span></div><div><b>02</b><span>FUTURE<br>TECHNOLOGY</span></div><div><b>03</b><span>DEEP-TECH<br>DEVELOPMENT</span></div></div></div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-index">05 <span>— TRANSMISSION</span></div>
+      <div class="contact-inner"><p class="eyebrow">OPEN CHANNEL</p><h2>Have an idea?<br><em>Let's connect.</em></h2><p>For engineering discussions, collaboration and opportunities.</p><div class="contact-links"><a href="https://github.com/engineerharish05" target="_blank" rel="noopener">GITHUB <span>↗</span></a><a href="https://rishinnovations.vercel.app" target="_blank" rel="noopener">RISH INNOVATIONS <span>↗</span></a></div><small class="contact-note">Direct email contact can be added when a public address is confirmed.</small></div>
     </section>
   </main>
 
-  <footer><div><strong>HARISH P</strong><span>ECE Engineering Student · Prathyusha Engineering College · 2028</span></div><div><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="about.html#contact">Contact</a></div></footer>
+  <footer><a class="footer-mark" href="#home">HARISH P<span> / ENGINEERING LOG</span></a><span>DESIGNED TO EXPLORE. BUILT TO LEARN.</span><a href="#home">BACK TO TOP ↑</a></footer>
+
+  <div class="portal-screen" id="portal-screen">
+    <div class="portal-caption"><span>PERSONAL ENGINEERING ARCHIVE</span><span>GATE SYSTEM / 001</span></div>
+    <div class="gate-wrap"><div class="gate-halo"></div><div class="gate-ring ring-outer"></div><div class="gate-ring ring-mid"></div><div class="gate-ring ring-inner"></div><div class="gate-core"><div class="gate-grid"></div><span>HP</span><small>INITIALIZE</small></div><div class="gate-sparks"></div></div>
+    <div class="portal-bottom"><p>AN INTERACTIVE ENGINEERING ENVIRONMENT</p><button id="enter-portal">INITIALIZE PORTAL <span>↗</span></button><small>HEADPHONES OPTIONAL · SOUND OFF BY DEFAULT</small></div>
+  </div>
+
+  <div class="hud" id="hud"><div class="hud-location"><i></i><span id="location-label">TOWER / ATRIUM</span></div><div class="hud-controls"><button data-target="about">01 PROFILE</button><button data-target="domains">02 DOMAINS</button><button data-target="projects">03 PROJECTS</button><button data-target="vision">04 HORIZON</button><button data-target="contact">05 CONTACT</button></div><button class="sound-toggle" id="sound-toggle" aria-label="Sound is off">SOUND OFF</button><button class="exit-portal" id="exit-portal" aria-label="Return to portal">↗</button></div>
+  <div class="mobile-dock"><a href="#about">PROFILE</a><a href="#domains">DOMAINS</a><a href="#projects">PROJECTS</a><a href="#contact">CONTACT</a></div>
+  <div class="world-fallback" id="world-fallback">3D scene unavailable — content remains accessible below.</div>
+  <script type="module" src="experience.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
