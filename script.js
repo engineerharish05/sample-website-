@@ -1,16 +1,6 @@
-const menuButton = document.querySelector('.menu-btn');
-const nav = document.querySelector('.nav-links');
-
-if (menuButton && nav) {
-  menuButton.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
-    menuButton.setAttribute('aria-expanded', String(open));
-  });
-
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-    });
-  });
-}
+const menuButton=document.querySelector('.menu-toggle');const nav=document.querySelector('.main-nav');if(menuButton&&nav){menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');}));}
+const labels={about:'TOWER / PROFILE FLOOR',domains:'TOWER / ENGINEERING LABS',projects:'TOWER / PROJECT HANGAR',vision:'TOWER / RESEARCH HORIZON',contact:'TOWER / TRANSMISSION'};const locationLabel=document.getElementById('location-label');const sections=Object.keys(labels).map(id=>document.getElementById(id)).filter(Boolean);if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting&&locationLabel)locationLabel.textContent=labels[entry.target.id];}),{threshold:.35});sections.forEach(section=>observer.observe(section));}
+document.querySelectorAll('[data-target]').forEach(button=>button.addEventListener('click',()=>document.getElementById(button.dataset.target)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})));
+document.getElementById('enter-portal')?.addEventListener('click',()=>{document.body.classList.add('entered');window.dispatchEvent(new CustomEvent('portfolio:enter'));document.getElementById('home')?.scrollIntoView({behavior:'smooth'});});
+document.getElementById('exit-portal')?.addEventListener('click',()=>{document.body.classList.remove('entered');window.scrollTo({top:0,behavior:'smooth'});});
+document.getElementById('sound-toggle')?.addEventListener('click',event=>{const button=event.currentTarget;button.textContent='SOUND OFF';button.setAttribute('aria-label','Ambient audio is not configured');});
